@@ -1,0 +1,18 @@
+# --- Núcleo de IA ---
+openai
+langchain
+langchain-openai
+
+# --- RAG y Documentos (El "Músculo") ---
+pypdf
+tiktoken
+faiss-cpu
+sentence-transformers
+pandas
+openpyxl
+python-docx
+
+# --- Utilidades y Desarrollo ---
+python-dotenv
+requests
+tqdm
