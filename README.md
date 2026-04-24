@@ -14,8 +14,8 @@ En esta sección se detallan las actualizaciones y mejoras críticas de **Vertex
 | Versión | Hito | Descripción | Estado |
 | :--- | :--- | :--- | :--- |
 | **v1.0** | **The Core** | Versión fundacional: Conexión base con GPT-4o-mini, identidad de Vertex establecida y bucle de chat infinito. | ✅ Estable |
-| **v1.1** | **RAG Engine** | Implementación de ingesta de documentos locales y base de datos vectorial para consultas contextuales. | 🛠️ En desarrollo |
-| **coming soon** | **Memory Pro** | Persistencia de memoria a corto plazo y gestión de contexto avanzado. | ⏳ Planificado |
+| **coming soon** | **RAG Engine** | Implementación de ingesta de documentos locales y base de datos vectorial para consultas contextuales. | 🛠️ En desarrollo |
+| **coming soon** | **Memory Pro** | Persistencia de memoria a corto plazo y gestión de contexto avanzado. | 🛠️ En desarrollo |
 
 ---
 
@@ -40,25 +40,17 @@ Sigue estos pasos para desplegar tu propia instancia de **Vertex** en local:
     git clone [https://github.com/harmondez/vertex_assistant.git](https://github.com/harmondez/vertex_assistant.git)
     cd vertex_assistant
 
-2. **Configurar el entorno virtual (Recomendado):**
-
-    python -m venv venv
-    # Activar en Windows:
-    .\venv\Scripts\activate
-    # Activar en Linux/Mac:
-    source venv/bin/activate
-
-3. **Instalar dependencias:**
+2. **Instalar dependencias:**
     pip install -r requirements.txt
 
-4. **Configuración de credenciales:**
-    # Localiza el archivo .env.example en la raíz del proyecto.
+3. **Configuración de credenciales:**
+    -Localiza el archivo .env.example en la raíz del proyecto.
 
-    # Renómbralo a .env
+    -Renómbralo a .env
 
-    # Abre el archivo y sustituye TU_API_KEY_AQUI por tu clave de OpenAI (requerida para este asistente).
+    -Abre el archivo y sustituye TU_API_KEY_AQUI por tu clave de OpenAI (requerida para este asistente).
 
-5. **DISFRUTA DE TU ASISTENTE!💪🤓**
+4. **DISFRUTA DE TU ASISTENTE!💪🤓**
 
 
 ---
