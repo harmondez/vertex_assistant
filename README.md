@@ -1,6 +1,6 @@
 # Vertex Assistant 🤖🌐
 
-![Vertex Banner](https://imgur.com/a/UqSZlnZ) 
+![Vertex Banner](https://i.imgur.com/UodWfKQ.png) 
 > *Nota: Sube la imagen que generamos a la carpeta de tu repo o usa un servicio de hosting de imágenes y pon el link aquí.*
 
 **Vertex** es un asistente personal polímata diseñado para adaptarse dinámicamente a cualquier necesidad del usuario. Desde resolución de problemas técnicos complejos hasta apoyo consultivo en diversas áreas del conocimiento.
