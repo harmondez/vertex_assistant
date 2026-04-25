@@ -22,3 +22,11 @@ __pycache__/
 .DS_Store
 
 
+# Knowledge base - Ignore local documents
+*.txt
+*.docx
+*.xlsx
+*.pdf
+
+# Ignore the knowledge folder entirely (opcional pero recomendado)
+knowledge/
