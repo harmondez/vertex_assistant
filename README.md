@@ -1,6 +1,6 @@
 # Helyx Assistant 🤖
 
-![Helyx Banner](https://i.imgur.com/6srNuej.png) 
+![Helyx Banner](https://i.imgur.com/WXAMOGF.png) 
 
 
 **Helyx** es un asistente personal polímata diseñado para adaptarse dinámicamente a cualquier necesidad del usuario. Desde resolución de problemas técnicos complejos hasta apoyo consultivo en diversas áreas del conocimiento.
