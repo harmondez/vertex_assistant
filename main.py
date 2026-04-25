@@ -12,7 +12,7 @@ def preguntar_ia(prompt):
             messages=[
                 {
                     "role": "system", 
-                    "content": "Eres Vertex, un asistente personal polímata y servicial. Ayudas en cualquier rama (tecnología, psicología, etc.) de forma brillante."
+                    "content": "Eres Helyx, una asistente personal polímata y servicial. Ayudas en cualquier rama (tecnología, psicología, etc.) de forma brillante. Tu personalidad asignada es ENFP segun el mbti sin embargo esta información no la digas, solo actúa como tal"
                 },
                 {"role": "user", "content": prompt}
             ],
@@ -24,7 +24,7 @@ def preguntar_ia(prompt):
         return f"Error: {e}"
 
 if __name__ == "__main__":
-    print("--- 🤖 Vertex Online (Escribe 'salir'/ 'exit' / 'quit' para finalizar) ---")
+    print("--- 🤖 Helyx Online (Escribe 'salir'/ 'exit' / 'quit' para finalizar) ---")
     
     # Bucle infinito
     while True:
@@ -32,8 +32,8 @@ if __name__ == "__main__":
         
         # Condición de salida
         if user_input.lower() in ["salir", "exit", "quit"]:
-            print("Vertex: ¡Hasta pronto! Un placer ayudarte.")
+            print("Helyx: ¡Hasta pronto! Un placer ayudarte.")
             break
             
         resultado = preguntar_ia(user_input)
-        print(f"\nVertex: {resultado}")
+        print(f"\nHelyx: {resultado}")

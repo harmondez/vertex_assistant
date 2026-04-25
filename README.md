@@ -1,15 +1,15 @@
-# Vertex Assistant 🤖
+# Helyx Assistant 🤖
 
-![Vertex Banner](https://i.imgur.com/UodWfKQ.png) 
+![Helyx Banner](https://i.imgur.com/6srNuej.png) 
 
 
-**Vertex** es un asistente personal polímata diseñado para adaptarse dinámicamente a cualquier necesidad del usuario. Desde resolución de problemas técnicos complejos hasta apoyo consultivo en diversas áreas del conocimiento.
+**Helyx** es un asistente personal polímata diseñado para adaptarse dinámicamente a cualquier necesidad del usuario. Desde resolución de problemas técnicos complejos hasta apoyo consultivo en diversas áreas del conocimiento.
 
 ---
 
 ## 🪵 Registro de Evolución (Changelog)
 
-En esta sección se detallan las actualizaciones y mejoras críticas de **Vertex**.
+En esta sección se detallan las actualizaciones y mejoras críticas de **Helyx**.
 
 | Versión | Hito | Descripción | Estado |
 | :--- | :--- | :--- | :--- |
@@ -33,11 +33,12 @@ En esta sección se detallan las actualizaciones y mejoras críticas de **Vertex
 
 ## 📋 Instalación Rápida
 
-Sigue estos pasos para desplegar tu propia instancia de **Vertex** en local:
+Sigue estos pasos para desplegar tu propia instancia de **Helyx** en local:
 
 1. **Clonar el repositorio:**
    
-    git clone [https://github.com/harmondez/vertex_assistant.git](https://github.com/harmondez/vertex_assistant.git)
+    git clone [https://github.com/harmondez/helyx_assistant.git](https://github.com/harmondez/helyx_assistant.git)
+    
     cd vertex_assistant
 
 2. **Instalar dependencias:**
