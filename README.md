@@ -7,15 +7,16 @@
 
 ---
 
-## 🪵 Registro de Evolución (Changelog)
+## Changelog
 
 En esta sección se detallan las actualizaciones y mejoras críticas de **Helyx**.
 
 | Versión | Hito | Descripción | Estado |
 | :--- | :--- | :--- | :--- |
-| **v1.0** | **The Core** | Versión fundacional: Conexión base con GPT-4o-mini, identidad de Vertex establecida y bucle de chat infinito. | ✅ Estable |
-| **coming soon** | **RAG Engine** | Implementación de ingesta de documentos locales y base de datos vectorial para consultas contextuales. | 🛠️ En desarrollo |
-| **coming soon** | **Memory Pro** | Persistencia de memoria a corto plazo y gestión de contexto avanzado. | 🛠️ En desarrollo |
+| **v1.0** | **The Core** | Versión fundacional: Conexión base con GPT-4o-mini, identidad de Helyx establecida y bucle de chat infinito. | ✅ Estable |
+| **v1.1** | **The Mind** | **Memoria de sesión (corto plazo):** Implementación de historial de mensajes (multi-turn). Actualización al motor **GPT-5.4-nano** y sistema de **observabilidad de costes** y tokens en tiempo real. | ✅ Estable |
+| **v1.2** | **The Archive** | **Persistencia:** Guardado del historial en archivos locales (`.json`) para que Helyx no olvide la conversación al cerrar la terminal. | 🛠️ En desarrollo |
+| **v2.0** | **RAG Engine** | **Cerebro aumentado:** Ingesta de documentos locales y base de datos vectorial (FAISS/ChromaDB) para consultas contextuales profundas. | ⏳ Planificado |
 
 ---
 
@@ -39,7 +40,7 @@ Sigue estos pasos para desplegar tu propia instancia de **Helyx** en local:
    
     git clone [https://github.com/harmondez/helyx_assistant.git](https://github.com/harmondez/helyx_assistant.git)
     
-    cd vertex_assistant
+    cd helyx_assistant
 
 2. **Instalar dependencias:**
     pip install -r requirements.txt
@@ -60,4 +61,4 @@ Sigue estos pasos para desplegar tu propia instancia de **Helyx** en local:
 
 > **Hernán** | *Prompt Engineer*
 > 
-> Vertex Assistant es mi primer proyecto enfocado en la arquitectura **RAG** (Retrieval-Augmented Generation). Este repositorio nace de la búsqueda por crear una herramienta polímata, funcional y escalable, aplicando las mejores prácticas de ingeniería de prompts y desarrollo de agentes de IA.
+> Helyx Assistant es mi primer proyecto enfocado en la arquitectura **RAG** (Retrieval-Augmented Generation). Este repositorio nace de la búsqueda por crear una herramienta polímata, funcional y escalable, aplicando las mejores prácticas de ingeniería de prompts y desarrollo de agentes de IA.
