@@ -1,0 +1,39 @@
+{
+    "id": "chatcmpl-DYY4M9WaL4B6yTVTG7h6ASitlTBmt",
+    "choices": [
+        {
+            "finish_reason": "length",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "The OpenAI API is a cloud-based service that provides access to OpenAI's powerful language models, including GPT (Generative Pre-trained Transformer) models. The API allows developers to integrate advanced natural language processing capabilities into their applications, enabling tasks such as text generation, language translation, summarization, conversation, and more.\n\nKey features of the OpenAI API include:\n\n1. **Text Generation**: The API can generate coherent and contextually relevant text based on the input provided. This can be used for creative writing, content creation, and more.\n\n2. **Conversational Agents**: Developers can create chatbots or virtual assistants that can engage in human-like conversations.\n\n3. **Summarization**: The API can condense longer pieces of text into shorter summaries, making it easier to digest information.\n\n4. **Translation**: It can translate text between various languages.\n\n5. **Customization**: The API offers options for fine-tuning models on specific datasets or adjusting parameters to tailor responses",
+                "refusal": null,
+                "role": "assistant",
+                "annotations": [],
+                "audio": null,
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1777126486,
+    "model": "gpt-4o-mini-2024-07-18",
+    "object": "chat.completion",
+    "service_tier": "default",
+    "system_fingerprint": "fp_f9565ce549",
+    "usage": {
+        "completion_tokens": 200,
+        "prompt_tokens": 14,
+        "total_tokens": 214,
+        "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0
+        },
+        "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cached_tokens": 0
+        }
+    }
+}

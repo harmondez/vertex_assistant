@@ -30,3 +30,5 @@ __pycache__/
 
 # Ignore the knowledge folder entirely (opcional pero recomendado)
 knowledge/
+
+practice.py
