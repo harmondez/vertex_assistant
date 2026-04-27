@@ -5,77 +5,74 @@ from openai import OpenAI
 load_dotenv()
 client = OpenAI()
 
-# --- v1.1: MEMORIA DE LA SESIÓN ---
-# Definimos el historial fuera de la función para que no se borre
-historial = [
-    {
+# --- v2.0: HELYX CORE (CLEAN & RAG-READY) ---
+
+def obtener_system_prompt():
+    """Define la identidad polímata y profesional de Helyx."""
+    return {
         "role": "system", 
-        "content": "Eres Helyx, una asistente personal polímata y servicial. Tu personalidad es ENFP. Eres brillante en tecnología y psicología."
+        "content": """
+# IDENTIDAD
+Eres HELYX, una asistente personal polímata de vanguardia con personalidad ENFP. 
+Eres experta en tecnología, programación y psicología, capaz de conectar ideas complejas de forma creativa y eficiente.
+
+# DIRECTRICES DE RESPUESTA
+1. Mantén un tono entusiasta, brillante y servicial.
+2. Utiliza Markdown para estructurar la información (tablas, negritas, listas).
+3. Utiliza LaTeX para cualquier fórmula matemática o científica ($inline$ o $$display$$).
+4. Sé concisa pero profunda en tus análisis.
+"""
     }
-]
 
+# Memoria de sesión: Iniciamos con el System Prompt
+historial = [obtener_system_prompt()]
 
-def preguntar_ia(prompt):
+def preguntar_ia(user_prompt):
+    global historial
     try:
-        # 1. Añadimos lo que tú escribes al historial
-        historial.append({"role": "user", "content": prompt})
+        # Añadimos el input del usuario al historial
+        historial.append({"role": "user", "content": user_prompt})
 
         response = client.chat.completions.create(
             model="gpt-5.4-nano",
-            messages=historial, # 2. Enviamos TODO el historial acumulado
+            messages=historial,
             temperature=0.7,
             top_p=0.9,
-            max_completion_tokens=400
+            max_completion_tokens=600
         )
+        
         content = response.choices[0].message.content
 
-        # 3. Guardamos la respuesta de Helyx en el historial para que la recuerde
+        # Guardamos la respuesta de Helyx para mantener el contexto
         historial.append({"role": "assistant", "content": content})
 
-
-
-        # --- LÓGICA DE COSTES (Interna) ---
-        input_price = 0.20
-        output_price = 1.25
-
+        # --- LÓGICA DE COSTES (Optimización de tokens) ---
+        input_price, output_price = 0.20, 1.25
         input_tokens = response.usage.prompt_tokens
         output_tokens = response.usage.completion_tokens
-
-        total_tokens = response.usage.total_tokens
         message_cost = (input_tokens * (input_price / 1_000_000)) + (output_tokens * (output_price / 1_000_000))
-        return content, total_tokens, message_cost
+        
+        return content, response.usage.total_tokens, message_cost
     
     except Exception as e:
-        return f"Error: {e}", 0, 0
-
-
-
+        return f"Error en la conexión: {e}", 0, 0
 
 if __name__ == "__main__":
-    print("--- 🤖 Helyx Online - v1.1 (GPT-5.4-nano) ---")
-    print("(Escribe 'salir' para finalizar)\n")
+    print("--- 🤖 HELYX ONLINE: NÚCLEO POLÍMATA ---")
+    print("(Escribe 'salir' para finalizar sesión)\n")
     
-    # Variables de acumulación
-    gasto_sesion = 0
-    tokens_sesion = 0 
+    gasto_total = 0
 
     while True:
         user_input = input("Tú: ")
         
         if user_input.lower() in ["salir", "exit", "quit"]:
             print(f"\n[Sesión finalizada]")
-
-            # Mostramos ambas métricas al despedirnos
-            print(f"📊 Total de tokens consumidos: {tokens_sesion}")
-            print(f"💰 Gasto total acumulado: ${gasto_sesion:.6f}")
-            print("Helyx: ¡Adiós! Nos vemos más tarde. ☺️")
+            print(f"[${gasto_total:.6f}]")
             break
 
-        respuesta, tokens_mensaje, coste = preguntar_ia(user_input)
+        respuesta, tokens, coste = preguntar_ia(user_input)
+        gasto_total += coste
         
-        # Acumulamos los valores del mensaje actual
-        gasto_sesion += coste
-        tokens_sesion += tokens_mensaje
-        
-        # Seguimos imprimiendo el contador por mensaje para feedback inmediato
-        print(f"\nHelyx: {respuesta} [{tokens_mensaje} tokens]")
+        print(f"\nHELYX: {respuesta}")
+        print(f"--- [Tkns: {tokens} | ${coste:.6f}] ---\n")
